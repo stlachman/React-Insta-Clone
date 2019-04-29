@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends React.Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <h2>Welcome to Instagram</h2>
+        <SearchBar />
         {this.state.data.map(post => {
           return <PostContainer post={post} key={post.timestamp}/>
         })}
