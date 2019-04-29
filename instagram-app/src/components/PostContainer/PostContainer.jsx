@@ -1,13 +1,11 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
-
 const PostContainer = props => {
+  // console.log(props);
   return (
     <div className="post-container">
-      {props.posts.map(post => {
-        return <CommentSection comments={post.comments} key={post.timestamp}/>
-      })}
+      {props.post.comments.map((comment, i) => <CommentSection comments={comment} key={i} />)}
     </div>
   )
 };

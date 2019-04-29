@@ -14,8 +14,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <h2>Hello World</h2>
-        <PostContainer posts={this.state.data} />
+        <h2>Welcome to Instagram</h2>
+        {this.state.data.map(post => {
+          return <PostContainer post={post} key={post.timestamp}/>
+        })}
       </div>
     )
    
