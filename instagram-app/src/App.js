@@ -16,9 +16,11 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <SearchBar />
-        {this.state.data.map(post => {
-          return <PostContainer post={post} key={post.timestamp}/>
-        })}
+        <div className="posts">
+          {this.state.data.map(post => {
+            return <PostContainer post={post} key={post.timestamp}/>
+          })}
+        </div>
       </div>
     )
    

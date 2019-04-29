@@ -3,4 +3,18 @@
   justify-content: space-between;
   border-bottom: 2px solid #eee;
   margin: 2rem 0;
+  padding: 0 0 2rem;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  color: #272727;
+  text-decoration: none;
+}
+
+.user-icon {
+  border: 0;
+  padding: 0;
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
 }

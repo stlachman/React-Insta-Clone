@@ -1,8 +1,17 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 .wrapper {
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts {
+  max-width: 600px;
   margin: 0 auto;
 }

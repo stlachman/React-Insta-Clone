@@ -5,7 +5,6 @@ import './PostContainer.css';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
-  // console.log(props);
   return (
     <div className="post-container">
       <Post thumbnail={props.post.thumbnailUrl} img={props.post.imageUrl} username={props.post.username} />

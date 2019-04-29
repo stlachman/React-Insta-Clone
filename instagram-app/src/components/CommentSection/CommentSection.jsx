@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const CommentSection = (props) => {
 	return (
     <div className="comment-container">
+      <button className="comment-icon"><i className="far fa-heart"></i></button><button className="comment-icon"><i className="far fa-comment"></i></button>
       <p>{props.likes} likes</p>
       {props.comments.map((comment, i) => {
         return <Comment username={comment.username} text={comment.text} key={i}/>
