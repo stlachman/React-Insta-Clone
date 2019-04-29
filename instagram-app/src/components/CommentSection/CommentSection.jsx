@@ -12,7 +12,10 @@ const CommentSection = (props) => {
         return <Comment username={comment.username} text={comment.text} key={i}/>
       })}
       <p>{props.time}</p>
-      <input className="comment-input" type="text" placeholder="Add a comment.." />
+      <form className="comment-form" action="#" method="POST">
+        <textarea className="comment-input" type="text" placeholder="Add a comment..">
+        </ textarea>
+      </form>
     </div>
   )
 };
