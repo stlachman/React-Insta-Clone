@@ -5,7 +5,7 @@ const SearchBar = props => {
   return (
     <div className="searchbar">
       <div className="logo">
-        <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a> | <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a> <div className="divider"></div> <a href="https://www.instagram.com/">Instagram</a>
       </div>
       <div className="search-bar">
         <input type="text" placeholder="Search" />

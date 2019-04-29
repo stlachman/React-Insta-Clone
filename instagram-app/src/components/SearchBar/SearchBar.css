@@ -1,9 +1,14 @@
 .searchbar {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid #e6e6e6;
   margin: 2rem 0;
   padding: 0 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo a {
@@ -12,9 +17,23 @@
   text-decoration: none;
 }
 
+.divider {
+  background: #262626;
+  width: 1px;
+  height: 20px;
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
 .user-icon {
   border: 0;
   padding: 0;
   margin: 0 1.5rem;
   font-size: 1.8rem;
+}
+
+.searchbar input {
+  border: 2px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
 }
