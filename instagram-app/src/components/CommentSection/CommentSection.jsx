@@ -12,7 +12,7 @@ const CommentSection = (props) => {
         return <Comment username={comment.username} text={comment.text} key={i}/>
       })}
       <p>{props.time}</p>
-      <input type="text" placeholder="Add a comment.." />
+      <input className="comment-input" type="text" placeholder="Add a comment.." />
     </div>
   )
 };

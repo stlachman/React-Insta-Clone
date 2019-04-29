@@ -1,5 +1,5 @@
 .comment-container {
-  padding: 0.5rem 1rem 1rem;
+  padding: 0.5rem 1rem 1.5rem;
 }
 
 .comment-container p {
@@ -22,4 +22,14 @@
 
 .comment p {
   font-size: 1.4rem;
+}
+
+.comment-input {
+  border: 0;
+  font-size: 1.4rem;
+  color: #9f9999;
+}
+
+.comment-input:focus {
+  outline: transparent;
 }
