@@ -3,11 +3,19 @@ import Comment from './Comment';
 import PropTypes from 'prop-types';
 
 const CommentSection = (props) => {
-	return <Comment username={props.comments.username} text={props.comments.text} />;
+  console.log(props);
+	return (
+    <>
+    {props.comments.map((comment, i) => {
+       return <Comment username={comment.username} text={comment.text} key={i}/>
+    })}
+    <input type="text" placeholder="Add a comment.." />
+   </>
+  )
 };
 
 CommentSection.propTypes = {
-  comments: PropTypes.object
+  comments: PropTypes.array
 }
 
 

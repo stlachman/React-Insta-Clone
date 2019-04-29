@@ -7,7 +7,7 @@ const PostContainer = props => {
   return (
     <div className="post-container">
       <Post thumbnail={props.post.thumbnailUrl} img={props.post.imageUrl} username={props.post.username} />
-      {props.post.comments.map((comment, i) => <CommentSection comments={comment} key={i} />)}
+      <CommentSection comments={props.post.comments} />
     </div>
   )
 };

@@ -6,7 +6,6 @@ const Comment = props => {
     <div className="comment">
       <p><strong>Username:</strong> {props.username}</p>
       <p><strong>Text:</strong> {props.text}</p>
-      <input type="text" placeholder="Add a comment.." />
     </div>
   )
 };
