@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './PostContainer.css';
 
 const Post = props => {
   return (
@@ -8,7 +9,7 @@ const Post = props => {
         <img src={props.thumbnail} alt=""/>
         <a href={`/${props.username}`}>{props.username}</a>
       </div>
-      <img src={props.img} alt=""/>
+      <img className="featured-image" src={props.img} alt=""/>
     </>
     
   )

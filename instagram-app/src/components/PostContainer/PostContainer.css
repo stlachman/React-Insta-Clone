@@ -1,0 +1,10 @@
+.post-container {
+  border: 1px solid #eee;
+  margin: 0 0 3rem;
+  max-width: 600px;
+}
+
+.featured-image {
+  max-width: 100%;
+  height: auto;
+}

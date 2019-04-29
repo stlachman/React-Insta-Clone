@@ -1,4 +1,6 @@
 .searchbar {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid #eee;
+  margin: 2rem 0;
 }
