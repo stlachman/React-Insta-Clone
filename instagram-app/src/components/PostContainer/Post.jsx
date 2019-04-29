@@ -5,9 +5,9 @@ import './PostContainer.css';
 const Post = props => {
   return (
     <>
-      <div className="post-information">
-        <img src={props.thumbnail} alt=""/>
-        <a href={`/${props.username}`}>{props.username}</a>
+      <div className="post-header">
+        <img className="post-thumbnail" src={props.thumbnail} alt=""/>
+        <a className="post-username" href={`/${props.username}`}>{props.username}</a>
       </div>
       <img className="featured-image" src={props.img} alt=""/>
     </>
