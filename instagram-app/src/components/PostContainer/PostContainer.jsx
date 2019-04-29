@@ -3,11 +3,10 @@ import CommentSection from '../CommentSection/CommentSection';
 
 
 const PostContainer = props => {
-  console.log(props);
   return (
     <div className="post-container">
       {props.posts.map(post => {
-        return <CommentSection post={post} key={post.timestamp}/>
+        return <CommentSection comments={post.comments} key={post.timestamp}/>
       })}
     </div>
   )
