@@ -38,7 +38,9 @@ class App extends React.Component {
   };
   
   searchPosts = (query) => {
-    console.log(query)
+    this.setState({
+      data: this.state.data.filter((post) => (post.username === query))
+    });
   }
 
 	render() {
