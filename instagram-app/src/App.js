@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      comments: []
     }
   }
 
@@ -18,13 +19,19 @@ class App extends React.Component {
     })
   }
 
+  addNewComment = (input, id) => {
+    console.log(input);
+    console.log(id);
+    
+  }
+
   render() {
     return (
       <div className="wrapper">
         <SearchBar />
         <div className="posts">
           {this.state.data.map(post => {
-            return <PostContainer post={post} key={post.timestamp}/>
+            return <PostContainer onAddNewComment={this.addNewComment} post={post} key={post.id}/>
           })}
         </div>
       </div>

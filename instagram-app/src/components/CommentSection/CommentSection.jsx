@@ -5,12 +5,22 @@ import './CommentSection.css';
 
 
 class CommentSection extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       input: ''
     }
   }
+
+  onUpdate = event => {
+    this.setState({[event.target.name]: event.target.value })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.onAddNewComment(this.state.input, this.props.id);
+    this.setState({ input: "" });
+  };
 
   render() {
     console.log(this.props);
@@ -22,9 +32,16 @@ class CommentSection extends React.Component {
           return <Comment username={comment.username} text={comment.text} key={i}/>
         })}
         <p>{this.props.time}</p>
-        <form className="comment-form" action="#" method="POST">
-          <textarea className="comment-input" type="text" placeholder="Add a comment..">
-          </ textarea>
+        <form className="comment-form" onSubmit={this.handleSubmit}>
+          <input
+            className="comment-input"
+            type="text"
+            placeholder="Add a comment.."
+            name="input"
+            value={this.state.input}
+            onChange={this.onUpdate}
+          />
+          <button>Submit</button>
         </form>
       </div>
     )
