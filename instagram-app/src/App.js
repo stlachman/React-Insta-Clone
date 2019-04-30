@@ -15,17 +15,25 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      data: dummyData
+      data: dummyData,
+      comments: dummyData.map(data => data.comments) 
+
     })
   }
 
   addNewComment = (input, id) => {
     console.log(input);
     console.log(id);
-    
+    this.setState({
+      data: this.state.data.map(post =>
+        post.id === id ? { ...post, comments: [...post.comments, {text: input, username: 'Test User'}]  } : post
+      )
+    })
+  
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="wrapper">
         <SearchBar />
