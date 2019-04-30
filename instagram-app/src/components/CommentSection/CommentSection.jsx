@@ -44,7 +44,6 @@ class CommentSection extends React.Component {
             value={this.state.input}
             onChange={this.onUpdate}
           />
-          <button>Submit</button>
         </form>
       </div>
     )

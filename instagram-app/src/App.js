@@ -28,7 +28,7 @@ class App extends React.Component {
 						? { ...post, comments: [ ...post.comments, { text: input, username: 'Test User' } ] }
 						: post
 			)
-		});
+    });
 	};
 
 	addLike = (id) => {
