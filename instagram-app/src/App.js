@@ -22,24 +22,29 @@ class App extends React.Component {
   }
 
   addNewComment = (input, id) => {
-    console.log(input);
-    console.log(id);
     this.setState({
       data: this.state.data.map(post =>
         post.id === id ? { ...post, comments: [...post.comments, {text: input, username: 'Test User'}]  } : post
       )
     })
-  
+  }
+
+  addLike = (id) => {
+    console.log(id);
+    this.setState({
+      data: this.state.data.map(post =>
+        post.id === id ? { ...post, likes: post.likes + 1 } : post
+      )
+    })
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="wrapper">
         <SearchBar />
         <div className="posts">
           {this.state.data.map(post => {
-            return <PostContainer onAddNewComment={this.addNewComment} post={post} key={post.id}/>
+            return <PostContainer onAddLike={this.addLike} onAddNewComment={this.addNewComment} post={post} key={post.id}/>
           })}
         </div>
       </div>

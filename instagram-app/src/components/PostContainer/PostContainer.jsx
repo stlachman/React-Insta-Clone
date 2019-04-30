@@ -8,7 +8,7 @@ const PostContainer = props => {
   return (
     <div className="post-container">
       <Post thumbnail={props.post.thumbnailUrl} img={props.post.imageUrl} username={props.post.username} />
-      <CommentSection onAddNewComment={props.onAddNewComment} id={props.post.id} likes={props.post.likes} time={props.post.timestamp} comments={props.post.comments} />
+      <CommentSection onAddLike={props.onAddLike} onAddNewComment={props.onAddNewComment} id={props.post.id} likes={props.post.likes} time={props.post.timestamp} comments={props.post.comments} />
     </div>
   )
 };
