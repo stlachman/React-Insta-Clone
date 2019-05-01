@@ -42,10 +42,9 @@ class PostsPage extends React.Component {
 	};
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="wrapper">
-				<SearchBar onSearchPosts={this.state.searchPosts} />
+				<SearchBar onSearchPosts={this.searchPosts} />
 				<div className="posts">
 					{this.state.data.map((post) => {
 						return (
