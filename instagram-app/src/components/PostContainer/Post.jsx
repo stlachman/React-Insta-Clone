@@ -20,6 +20,7 @@ const PostThumbnail = styled.img`
 `;
 
 
+
 const Post = props => {
   return (
     <>
