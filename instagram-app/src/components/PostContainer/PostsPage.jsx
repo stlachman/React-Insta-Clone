@@ -1,7 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import dummyData from '../../dummy-data';
+
+const Wrapper = styled.div`
+	max-width: 1200px;
+	margin: 0 auto;
+`;
+
+const PostsWrapper = styled.div`
+	max-width: 600px;
+	margin: 0 auto;
+`;
 
 class PostsPage extends React.Component {
 	constructor(props) {
@@ -23,7 +34,13 @@ class PostsPage extends React.Component {
 			data: this.state.data.map(
 				(post) =>
 					post.id === id
-						? { ...post, comments: [ ...post.comments, { text: input, username: localStorage.getItem('username') } ] }
+						? {
+								...post,
+								comments: [
+									...post.comments,
+									{ text: input, username: localStorage.getItem('username') }
+								]
+							}
 						: post
 			)
 		});
@@ -43,9 +60,9 @@ class PostsPage extends React.Component {
 
 	render() {
 		return (
-			<div className="wrapper">
+			<Wrapper>
 				<SearchBar onSearchPosts={this.searchPosts} />
-				<div className="posts">
+				<PostsWrapper>
 					{this.state.data.map((post) => {
 						return (
 							<PostContainer
@@ -56,8 +73,8 @@ class PostsPage extends React.Component {
 							/>
 						);
 					})}
-				</div>
-			</div>
+				</PostsWrapper>
+			</Wrapper>
 		);
 	}
 }
