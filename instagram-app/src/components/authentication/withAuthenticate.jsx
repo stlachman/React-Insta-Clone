@@ -12,6 +12,8 @@ const withAuthenticate = FirstComponent => SecondComponent =>
     componentDidMount() {
       if (localStorage.getItem('username')) {
         this.setState({ loggedIn: true })
+      } else {
+        this.setState({ loggedIn: false })
       }
     }
 

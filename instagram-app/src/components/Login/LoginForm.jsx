@@ -1,31 +1,64 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const LoginForm = props => {
-  return (
-    <form className="login-form" onSubmit={props.onHandleSubmit}>
-      <div className="input-container">
-        <input
-          type="text"
-          name="username"
-          value={props.username}
-          onChange={props.onHandleChange}
-          placeholder="Enter Username"
-        />
-      </div>
-      <div className="input-container">
-        <input
-          type="password"
-          name="password"
-          value={props.password}
-          onChange={props.onHandleChange}
-          placeholder="Enter Password"
-        />
-      </div>
-      <div className="button-container">
-        <button className="form-button">Log In</button>
-      </div>
-    </form>
-  );
+const Form = styled.form`
+	max-width: 200px;
+	margin: 0 auto;
+`;
+
+const InputContainer = styled.div`margin: 1.5rem 0 0;`;
+
+const Input = styled.input`
+	padding: 0.8rem 0.5rem 0.8rem 0.6rem;
+	font-size: 1.3rem;
+	width: 100%;
+	border: 1px solid #e6e6e6;
+`;
+
+const ButtonContainer = styled.div`margin: 1.5rem 0 0;`;
+
+const FormButton = styled.button`
+	padding: 0.6rem 2rem;
+	background: #3896f0;
+	border: 0;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	width: 100%;
+	transition: 0.2s opacity ease-in;
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+`;
+
+const LoginForm = (props) => {
+	return (
+		<Form onSubmit={props.onHandleSubmit}>
+			<InputContainer>
+				<Input
+					type="text"
+					name="username"
+					value={props.username}
+					onChange={props.onHandleChange}
+					placeholder="Enter Username"
+				/>
+			</InputContainer>
+			<InputContainer>
+				<Input
+					type="password"
+					name="password"
+					value={props.password}
+					onChange={props.onHandleChange}
+					placeholder="Enter Password"
+				/>
+			</InputContainer>
+			<ButtonContainer>
+				<FormButton>Log In</FormButton>
+			</ButtonContainer>
+		</Form>
+	);
 };
 
 export default LoginForm;

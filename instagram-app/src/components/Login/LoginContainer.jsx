@@ -12,11 +12,16 @@ const FormContainer = styled.div`
   padding: 0 0 4rem;
 `;
 
+const FormTitle = styled.h2`
+  font-size: 2.8rem;
+  margin: 1.5rem 0 1.8rem;
+`;
+
 const LoginContainer = (props) => {
 	return (
 		<section className="login">
 			<FormContainer>
-				<h2>Instagram</h2>
+        <FormTitle>Instagram</FormTitle>
 				<LoginForm
 					username={props.username}
 					password={props.password}
