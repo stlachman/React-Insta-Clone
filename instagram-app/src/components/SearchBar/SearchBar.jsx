@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../../img/instagram-logo-small.png';
 
-const SearchBarContainer = styled.div`
+const Header = styled.div`
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid #e6e6e6;
@@ -18,6 +19,10 @@ const LogoLink = styled.a`
 	font-size: 1.8rem;
 	color: #272727;
 	text-decoration: none;
+`;
+
+const LogoImage = styled.img`
+  max-width: 90px;
 `;
 
 const Divider = styled.div`
@@ -72,12 +77,13 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<SearchBarContainer>
+			<Header>
 				<LogoContainer>
 					<LogoLink href="https://www.instagram.com/">
 						<i className="fab fa-instagram" />
 					</LogoLink>{' '}
-					<Divider></Divider> <LogoLink href="https://www.instagram.com/">Instagram</LogoLink>
+					<Divider></Divider> 
+          <LogoLink href="https://www.instagram.com/"><LogoImage src={logo}></LogoImage></LogoLink>
 				</LogoContainer>
 				<div className="search-bar">
 					<form onSubmit={this.handleSubmit}>
@@ -99,7 +105,7 @@ class SearchBar extends React.Component {
 						<i className="far fa-user" />
           </IconButton>
 				</div>
-			</SearchBarContainer>
+			</Header>
 		);
 	}
 }

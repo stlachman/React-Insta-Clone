@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-container">
-        <button className="comment-icon" onClick={this.handleClick}><i className="far fa-heart"></i></button><button className="comment-icon"><i className="far fa-comment"></i></button>
+        <button className="comment-icon" onClick={this.handleClick}><i className="far fa-heart"></i></button><button className="comment-icon"><i className="far fa-comment fa-flip-horizontal	"></i></button>
         <p>{this.props.likes} likes</p>
         {this.props.comments.map((comment, i) => {
           return <Comment username={comment.username} text={comment.text} key={i}/>
