@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const PostsWrapper = styled.div`
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 5rem auto 0;
 `;
 
 class PostsPage extends React.Component {

@@ -9,7 +9,7 @@ const Paragraph = styled.p`
 
 const Comment = props => {
   return (
-    <div className="comment">
+    <div>
       <Paragraph><UserName style={ {marginLeft: 0} } href={`/${props.username}`}>{props.username}</UserName> {props.text}</Paragraph>
     </div>
   )

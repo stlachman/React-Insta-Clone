@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from './LoginForm';
 import styled from 'styled-components';
+import logo from '../../img/Instagram_logo.svg';
 
 const FormContainer = styled.div`
 	margin: 5rem auto 0;
@@ -12,15 +13,17 @@ const FormContainer = styled.div`
 	padding: 0 0 4rem;
 `;
 
-const FormTitle = styled.h2`
-	font-size: 2.8rem;
-	margin: 1.5rem 0 1.8rem;
+const FormTitle = styled.h1`
+`;
+
+const FormImg = styled.img`
+  max-width: 200px;
 `;
 
 const LoginContainer = (props) => {
 	return (
 		<FormContainer>
-			<FormTitle>Instagram</FormTitle>
+			<FormTitle><FormImg src={logo} /></FormTitle>
 			<LoginForm
 				username={props.username}
 				password={props.password}
