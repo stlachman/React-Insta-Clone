@@ -10,9 +10,17 @@ const InputContainer = styled.div`margin: 1.5rem 0 0;`;
 
 const Input = styled.input`
 	padding: 0.8rem 0.5rem 0.8rem 0.6rem;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
+  color: #262626;
 	width: 100%;
 	border: 1px solid #e6e6e6;
+  transition: 0.275s border ease-in;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    border: 1px solid #c0c0c0;
+  }
 `;
 
 const ButtonContainer = styled.div`margin: 1.5rem 0 0;`;
