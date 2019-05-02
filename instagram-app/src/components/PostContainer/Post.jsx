@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const PostHeader = styled.div`
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem 0.5rem;
 `;
 
 const PostImage = styled.img`
@@ -18,6 +18,7 @@ const PostThumbnail = styled.img`
   max-width: 30px;
   border-radius: 50%;
 `;
+
 
 const Post = props => {
   return (

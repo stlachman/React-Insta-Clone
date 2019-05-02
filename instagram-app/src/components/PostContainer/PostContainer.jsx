@@ -8,6 +8,7 @@ const Container = styled.div`
   border: 1px solid #eee;
   margin: 0 0 3rem;
   max-width: 600px;
+  background: #fff;
 `;
 
 const PostContainer = props => {

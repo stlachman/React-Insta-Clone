@@ -4,6 +4,7 @@ import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import dummyData from '../../dummy-data';
 
+
 const Wrapper = styled.div`
 	max-width: 1200px;
 	margin: 0 auto;
