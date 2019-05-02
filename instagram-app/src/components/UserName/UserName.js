@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const UserName = styled.a`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #272727;
   text-decoration: none;
   font-weight: bold;
