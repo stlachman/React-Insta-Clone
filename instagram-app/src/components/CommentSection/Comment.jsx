@@ -5,6 +5,7 @@ import UserName from '../UserName/UserName';
 
 const Paragraph = styled.p`
   font-size: 1.4rem;
+  font-weight: 500;
 `;
 
 const Comment = props => {

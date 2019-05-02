@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../img/Instagram_logo.svg';
- 
 
 const Header = styled.div`
 	display: flex;
@@ -19,44 +18,56 @@ const LogoContainer = styled.div`
 const LogoLink = styled.a`
 	font-size: 1.8rem;
 	color: #272727;
-  text-decoration: none;
-  line-height: 0;
+	text-decoration: none;
+	line-height: 0;
 `;
 
-const LogoImage = styled.img`
-  max-width: 90px;
-`;
+const LogoImage = styled.img`max-width: 90px;`;
 
 const Divider = styled.div`
-  background: #262626;
-  width: 1px;
-  height: 20px;
-  margin: 0 0.5rem;
-  display: inline-block;
+	background: #262626;
+	width: 1px;
+	height: 20px;
+	margin: 0 0.5rem;
+	display: inline-block;
 `;
 
 const IconButton = styled.button`
-  border: 0;
-  padding: 0;
-  margin: 0 1.5rem;
-  font-size: 1.8rem;
+	border: 0;
+	padding: 0;
+	margin: 0 1.5rem;
+	font-size: 1.8rem;
+	color: #2b2b2b;
+	transition: 0.3s opacity ease-in;
+	&:hover {
+		cursor: pointer;
+		opacity: 0.75;
+	}
+
+	&:focus {
+		outline: none;
+	}
+`;
+
+const LogoutButton = styled.button`
+  background: transparent;
   color: #2b2b2b;
-  transition: 0.3s opacity ease-in;
+  border: 2px solid #2b2b2b;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  transition: 0.2s all ease-in;
+  font-weight: 500;
   &:hover {
     cursor: pointer;
-    opacity: 0.75;
+    background: #2b2b2b;
+    color: #fff;
   }
-
-  &:focus {
-    outline: none;
-  }
-
 `;
 
 const SearchInput = styled.input`
-  border: 2px solid #dbdbdb;
-  border-radius: 5px;
-  padding: 0.5rem 0.8rem;
+	border: 2px solid #dbdbdb;
+	border-radius: 5px;
+	padding: 0.5rem 0.8rem;
 `;
 
 class SearchBar extends React.Component {
@@ -77,6 +88,13 @@ class SearchBar extends React.Component {
 		this.setState({ search: '' });
 	};
 
+	logout = (event) => {
+		if (localStorage.getItem('username')) {
+			localStorage.removeItem('username');
+			window.location.reload();
+		}
+	};
+
 	render() {
 		return (
 			<Header>
@@ -84,29 +102,34 @@ class SearchBar extends React.Component {
 					<LogoLink href="https://www.instagram.com/">
 						<i className="fab fa-instagram" />
 					</LogoLink>{' '}
-					<Divider></Divider> 
-          <LogoLink href="https://www.instagram.com/"><LogoImage src={logo} alt="Logo"></LogoImage></LogoLink>
+					<Divider />
+					<LogoLink href="https://www.instagram.com/">
+						<LogoImage src={logo} alt="Logo" />
+					</LogoLink>
 				</LogoContainer>
-				<div className="search-bar">
+				<LogoContainer>
 					<form onSubmit={this.handleSubmit}>
-            <SearchInput type="text"
-            placeholder="Search"
-            name="search"
-            onChange={this.onUpdate}
-            value={this.state.search}></SearchInput>
+						<SearchInput
+							type="text"
+							placeholder="Search"
+							name="search"
+							onChange={this.onUpdate}
+							value={this.state.search}
+						/>
 					</form>
-				</div>
-				<div className="user-info">
+				</LogoContainer>
+				<LogoContainer>
 					<IconButton>
 						<i className="far fa-compass" />
-          </IconButton>
+					</IconButton>
 					<IconButton>
 						<i className="far fa-heart" />
-          </IconButton>
+					</IconButton>
 					<IconButton>
 						<i className="far fa-user" />
-          </IconButton>
-				</div>
+					</IconButton>
+					<LogoutButton onClick={this.logout}>Log Out</LogoutButton>
+				</LogoContainer>
 			</Header>
 		);
 	}

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Container = styled.div`padding: 0.5rem 1rem 1.5rem;`;
 
-const Paragraph = styled.p`font-size: 1.5rem;`;
+const Paragraph = styled.p`font-size: 1.5rem; font-weight: 500;`;
 
 const IconButton = styled.button`
 	border: 0;

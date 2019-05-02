@@ -16,11 +16,11 @@ class Login extends React.Component {
 	};
 
 	handleSubmit = (event) => {
-    this.login(this.state.username, this.state.password);
+    this.login(this.state.username);
 		this.setState({ username: '', password: '' });
 	};
 
-	login = (username, password) => {
+	login = (username) => {
 		if (localStorage.getItem('username') !== '') {
 			localStorage.setItem('username', username);
 		}
