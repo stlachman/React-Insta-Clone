@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../img/instagram-logo-small.png';
+import logo from '../../img/Instagram_logo.svg';
+ 
 
 const Header = styled.div`
 	display: flex;
@@ -18,7 +19,8 @@ const LogoContainer = styled.div`
 const LogoLink = styled.a`
 	font-size: 1.8rem;
 	color: #272727;
-	text-decoration: none;
+  text-decoration: none;
+  line-height: 0;
 `;
 
 const LogoImage = styled.img`
@@ -83,7 +85,7 @@ class SearchBar extends React.Component {
 						<i className="fab fa-instagram" />
 					</LogoLink>{' '}
 					<Divider></Divider> 
-          <LogoLink href="https://www.instagram.com/"><LogoImage src={logo}></LogoImage></LogoLink>
+          <LogoLink href="https://www.instagram.com/"><LogoImage src={logo} alt="Logo"></LogoImage></LogoLink>
 				</LogoContainer>
 				<div className="search-bar">
 					<form onSubmit={this.handleSubmit}>

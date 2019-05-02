@@ -1,15 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import UserName from '../UserName/UserName';
+import styled from 'styled-components';
+
+const PostHeader = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+`;
+
+const PostImage = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+
+const PostThumbnail = styled.img`
+  max-width: 30px;
+  border-radius: 50%;
+`;
 
 const Post = props => {
   return (
     <>
-      <div className="post-header">
-        <img className="post-thumbnail" src={props.thumbnail} alt=""/>
-        <a className="post-username" href={`/${props.username}`}>{props.username}</a>
-      </div>
-      <img className="featured-image" src={props.img} alt=""/>
+      <PostHeader>
+        <PostThumbnail src={props.thumbnail} alt={props.username} />
+        <UserName href={`/${props.username}`}>{props.username}</UserName>
+      </PostHeader>
+      <PostImage src={props.img} alt="" />
     </>
     
   )
